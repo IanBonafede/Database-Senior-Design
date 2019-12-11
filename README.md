@@ -1,29 +1,20 @@
-# final-project-care-package-crew
-final-project-care-package-crew created by GitHub Classroom
+# CS179 Care Package Crew - A Million Thanks
 
-go to 'directory million-thanks-front-end' and type 'npm start' to start
+How to start our project: (Each command needs its own terminal)
+From the million-thanks-front-end folder, run `npm start`
+From million-thanks-back-end, run `python ocrserver.py`
+From million-thanks-back-end, run `node receivefile.js`
+From million-thanks-database/postgresql, run `./rundb.sh`
+From million-thanks-database, run `app.js`
 
-OCR:
+Upload a single .jps or multiple .jpgs using the "Upload File" button.
+Check the million-thanks-back-end/uploadimage folder to confirm that your file(s) have been uploaded.
+Click "Get Address" to start the OCR process.
+Good confidence, valid addresses will automatically be uploaded to the database. 
+Any pictures that had low confidence or an invalid address will show up on the upload page. You can change any of the fields and press confirm to send the rows to the database.
 
-general page:
+##OCR
+This is the main page for Google Cloud Vision OCR which we used for this project.
 https://cloud.google.com/vision/docs/handwriting
 
-go here:
-
-https://cloud.google.com/vision/docs/quickstart-client-libraries
-
-look at step 5, set the environment credentials variable to the json in the ocr folder.
-
-IF YOU DONT WANT TO KEEP DOING IT: search "environment variable" on windows search and open "edit the system environment variables". Click environment variables. Under system variables click new.
-
-Variable name: GOOGLE_APPLICATION_CREDENTIALS
-
-variable value: point it to the json file in the ocr folder.
-
-also pip install --upgrade google-cloud-vision
-
-go wild.
-
-go to million-thanks-back-end directory and type 'node receiveFile.js' to run code that receive upload file from front-end
-
-thomas: receivefile.js line28 after sendtopython=true
+If not previously installed, run `pip install --upgrade google-cloud-vision`.
