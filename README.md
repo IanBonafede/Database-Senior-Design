@@ -13,7 +13,6 @@ From million-thanks-database/postgresql, run `./rundb.sh`
 From million-thanks-database, run `app.js`
 
 
-
 Upload a single .jps or multiple .jpgs using the "Upload File" button.
 
 Check the million-thanks-back-end/uploadimage folder to confirm that your file(s) have been uploaded.
@@ -25,10 +24,12 @@ Good confidence, valid addresses will automatically be uploaded to the database.
 Any pictures that had low confidence or an invalid address will show up on the upload page. You can change any of the fields and press 
 confirm to send the rows to the database.
 
-##OCR
+### OCR
 
 This is the main page for Google Cloud Vision OCR which we used for this project.
 
 https://cloud.google.com/vision/docs/handwriting
+
+You need to create a Google Cloud Platform account and update the the credentials in million-thanks-back-end/ocr/license.json.
 
 If not previously installed, run `pip install --upgrade google-cloud-vision`.
