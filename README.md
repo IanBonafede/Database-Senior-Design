@@ -4,13 +4,13 @@ How to start our project: (Each command needs its own terminal)
 
 From the million-thanks-front-end folder, run `npm start`
 
-From million-thanks-back-end, run `python ocrserver.py`
+From million-thanks-back-end folder, run `python ocrserver.py`
 
-From million-thanks-back-end, run `node receivefile.js`
+From million-thanks-back-end folder, run `node receivefile.js`
 
-From million-thanks-database/postgresql, run `./rundb.sh`
+From million-thanks-database/postgresql folder, run `./rundb.sh`
 
-From million-thanks-database, run `app.js`
+From million-thanks-database folder, run `app.js`
 
 
 Upload a single .jps or multiple .jpgs using the "Upload File" button.
@@ -43,3 +43,15 @@ We use JavaScript Axios package for send image from front-end to back-end. Also,
 Go to million-thanks-back-end folder. Run `npm install express` to install express.
 
 Go to million-thanks-front-end folder. Run `npm install axios` to install axios.
+
+### FRONT-END
+
+We use ReactJS for our front-end, so you need to install Node.js on your computer to start the front-end.
+
+If you use Mac. run `brew install node` to install nodeJS or you can download node.js from https://nodejs.org/en/download/
+
+We use react-map-gl to display map for analytic map. run `npm install react-map-gl` for react-map-gl map package.
+
+## DATABASE
+
+We use postgresql for our database. To install postgresql on mac, run `brew install postgresql` or download from https://www.postgresql.org/download/ on other operating system.
