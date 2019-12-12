@@ -33,3 +33,13 @@ https://cloud.google.com/vision/docs/handwriting
 You need to create a Google Cloud Platform account and update the the credentials in million-thanks-back-end/ocr/license.json.
 
 If not previously installed, run `pip install --upgrade google-cloud-vision`.
+
+### SERVER
+
+We use Python for OCR, so we use Python Flask package to build server. run 'pip install flask' to install flask for your computer.
+
+We use JavaScript Axios package for send image from front-end to back-end. Also, We use JavaScript Express for our upload image server and database server. You need to install Axios and Express for this upload image feature.
+
+Go to million-thanks-back-end folder. Run 'npm install express' to install express.
+
+Go to million-thanks-front-end folder. Run 'npm install axios' to install axios.
