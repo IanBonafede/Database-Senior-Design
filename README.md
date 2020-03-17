@@ -54,8 +54,7 @@ We use react-map-gl to display map for analytic map. run `npm install react-map-
 
 ## DATABASE
 
-<<<<<<< HEAD
 thomas: receivefile.js line28 after sendtopython=true
-=======
+
 We use postgresql for our database. To install postgresql on mac, run `brew install postgresql` or download from https://www.postgresql.org/download/ on other operating system.
->>>>>>> fcea8efbbb2c5ffd47cc62704b6186ac50f9154f
+
