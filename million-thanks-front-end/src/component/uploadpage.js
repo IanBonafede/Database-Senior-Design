@@ -46,7 +46,6 @@ class UploadPage extends React.Component {
         }
         else if (event.target.name === 'uploadFile') {
             console.log(this.state.uploadFile)
-            //console.log("heelo")
             const image = new FormData()
             image.append('file', this.state.uploadFile)
             
@@ -60,20 +59,21 @@ class UploadPage extends React.Component {
                 this.setState({display : this.state.getimage})
             })
         }
-        // else if (event.target.name === 'nextPerson') {
-        //     let currCount = this.state.counter
-        //     if (this.state.data === null || currCount >= this.state.data.length) 
-        //         return
-        //     this.setState({ 
-        //         customer_name: this.state.data[currCount]['customer_name'],
-        //         customer_street: this.state.data[currCount]['customer_street'],
-        //         customer_city: this.state.data[currCount]['customer_city'],
-        //         customer_state: this.state.data[currCount]['customer_state'],
-        //         customer_zip: this.state.data[currCount]['customer_zip'],
-        //     })
-        //     this.setState(prevState => ({counter : prevState.counter + 1}))
+    /*     else if (event.target.name === 'confirmButton') {
+            console.log("confirmed: ", this.state.data[1])
+             let currCount = this.state.counter
+             if (this.state.data === null || currCount >= this.state.data.length) 
+                 return
+             this.setState({ 
+                 customer_name: this.state.data[currCount]['customer_name'],
+                 customer_street: this.state.data[currCount]['customer_street'],
+                 customer_city: this.state.data[currCount]['customer_city'],
+                 customer_state: this.state.data[currCount]['customer_state'],
+                 customer_zip: this.state.data[currCount]['customer_zip'],
+             })
+             this.setState(prevState => ({counter : prevState.counter + 1}))
             
-        // }
+         }*/
         else if (event.target.name === "confirmButton") {
             // TODO:: send the correct address to back-end to insert into database
             console.log("confirmed: ", this.state.data[1])
@@ -100,14 +100,16 @@ class UploadPage extends React.Component {
                     // customer_state: data[0]['customer_state'],
                     // customer_zip: data[0]['customer_zip'],
                     data: data,
-                }, () => {
+                }, 
+                () => {
                             if (this.state.data[0].length > 0) {
                                 add(this.state.data[0])
                             }
                             if (this.state.data[1].length > 0) {
                                 this.setState({displayTable : true})
                             }
-                        })
+                        }
+                    )
             })
             
             this.setState({uploadFile:null})

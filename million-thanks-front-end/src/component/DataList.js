@@ -4,7 +4,7 @@ import {makeStyles, Table, TableBody, TableCell, TableHead, TableRow, Paper, Tex
 import '../index.css'
 
 
-
+var getimg
 
 export const DataList = ({click, handle, data, display, page}) => {
     const classes = makeStyles(theme => ({
@@ -54,16 +54,18 @@ export const DataList = ({click, handle, data, display, page}) => {
                                 <TableCell align="right">
                                     <TextField value={row.customer_zip} onChange={e => handle(e, i, "customer_zip")}/>
                                 </TableCell>
-                                <TableCell align="right">{row.file_name}</TableCell>
+                                <TableCell align="right" onClick={getimg= row.file_name}>{row.file_name}</TableCell>
                             </TableRow>
                             ))}
                         </TableBody>
                         </Table>
                         </Paper>
                         <button name= "confirmButton" className="clickButton" type="button" onClick={click} >confirm</button>
+                        <img src={"/storage/"+getimg} height="920" width="920" alt="display of image upload"/>
                     </div>
                 )
             }
+            //getimg = {row.file_name}
             else {
                 return(
                     <div>
